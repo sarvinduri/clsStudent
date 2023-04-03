@@ -1,0 +1,58 @@
+﻿<Window x:Class="clsStudent.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:clsStudent"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <TextBlock Text="Введите ФИО"/>
+                <TextBox Name="txtF" 
+                     Width="150" 
+                     Height="30" 
+                     Margin="5" 
+                     VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBlock Text="Введите адрес"/>
+                <TextBox Name="txtAd" 
+                     Width="150" 
+                     Height="30" 
+                     Margin="5" 
+                     VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBlock Text="Введите телефон"/>
+                <TextBox Name="txtPh" 
+                     Width="150" 
+                     Height="30" 
+                     Margin="5" 
+                     VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBlock Text="Введите курс"/>
+                <TextBox Name="txtK" 
+                     Width="150" 
+                     Height="30" 
+                     Margin="5" 
+                     VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBlock Text="Введите группа"/>
+                <TextBox Name="txtGr" 
+                     Width="150" 
+                     Height="30" 
+                     Margin="5" 
+                     VerticalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
