@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,27 @@ namespace clsStudent
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnSavestudent_Click(object sender, RoutedEventArgs e)
+        {
+            ClsStudent student = new ClsStudent(); 
+            student.FIO = TxtN.Text;
+            student.Birthday = (DateTime)DtBirthday.SelectedDate;
+            student.Scholarship = double.Parse(TxtStip.Text);
+
+            LstStudents.Items.Clear();
+            LstStudents.Items.Add(student.PrintToScreen());
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            if (saveFileDialog.ShowDialog() == false)
+                return;
+            student.SaveToFile(saveFileDialog.FileName);
+        }
+
+        private void BtnClear_Click(object sender, RoutedEventArgs e)
+        {
+            TxtN.Clear();
+            TxtStip.Clear();
         }
     }
 }

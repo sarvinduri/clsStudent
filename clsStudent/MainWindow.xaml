@@ -12,47 +12,33 @@
             <RowDefinition Height="4*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Vertical" VerticalAlignment="Stretch">
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-            <TextBlock Text="Введите ФИО"/>
-                <TextBox Name="txtF" 
-                     Width="150" 
-                     Height="30" 
-                     Margin="5" 
-                     VerticalAlignment="Center"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                <TextBlock Text="Введите адрес"/>
-                <TextBox Name="txtAd" 
-                     Width="150" 
-                     Height="30" 
-                     Margin="5" 
-                     VerticalAlignment="Center"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                <TextBlock Text="Введите телефон"/>
-                <TextBox Name="txtPh" 
-                     Width="150" 
-                     Height="30" 
-                     Margin="5" 
-                     VerticalAlignment="Center"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                <TextBlock Text="Введите курс"/>
-                <TextBox Name="txtK" 
-                     Width="150" 
-                     Height="30" 
-                     Margin="5" 
-                     VerticalAlignment="Center"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                <TextBlock Text="Введите группа"/>
-                <TextBox Name="txtGr" 
-                     Width="150" 
-                     Height="30" 
-                     Margin="5" 
-                     VerticalAlignment="Center"/>
-            </StackPanel>
+        
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center">
+            
+            <TextBlock Text="ФИО студента" />
+            <TextBox Name="TxtN" Width="100" Height="20"/>
+            
+            <TextBlock Text="Дата рождения студента" />
+            <DatePicker Name="DtBirthday" Width="100" Height="30"/>
+            
+            <TextBlock Text="Стипендия студента"/>
+            <TextBox Name="TxtStip" Width="100" Height="20"/>
         </StackPanel>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <ListBox  Width="400" Height="220"
+                 Name="LstStudents"/>
+        </StackPanel>
+        
+        <DockPanel Grid.Row="2" HorizontalAlignment="Center">
+            <Button Name="BtnSavestudent" Content="Записать студента"
+                    Style="{StaticResource StyleButtom}" 
+                    Click="BtnSavestudent_Click"/>
+            <Button Name="BtnClear" Content="Очистить" 
+                    Style="{StaticResource StyleButtom}"
+                    Click="BtnClear_Click"/>
+        </DockPanel>
     </Grid>
 </Window>
